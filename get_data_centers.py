@@ -28,7 +28,8 @@ def get_user_password():
     return mypwd1
 
 def get_data_centers():
-    url = 'https://cfg0-cidbapik1-0-prd.data.sfdc.net/cidb-api/1.04/datacenters?fields=name'
+    #url = 'https://cfg0-cidbapik1-0-prd.data.sfdc.net/cidb-api/1.04/datacenters?fields=name'
+    url = 'https://cfg0-cidbapik1-0-prd.data.sfdc.net/cidb-api/1.04/alldatacenters?fields=name'
     r = requests.get(url, timeout=10, auth=requests.auth.HTTPBasicAuth('ayousuf', get_user_password()))
     if r.ok:
         json_data = r.text
